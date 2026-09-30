@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Arohak MDM</string>
+    <string name="device_admin_label">Arohak MDM Agent</string>
+    <string name="device_admin_description">Enforces enterprise security policies, zero-trust telemetry, and remote wipe capabilities.</string>
+</resources>

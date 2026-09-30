@@ -1,0 +1,6 @@
+{
+  "name": "Arohak MDM",
+  "description": "Enterprise endpoint telemetry, behavioral cadence analytics, anti-cheat detection, hardware inventory, and zero-trust endpoint firewall.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

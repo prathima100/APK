@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *, [data-theme="dark"], [data-theme="dark"] *));
+
+@theme {
+  --font-sans: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  --font-serif: 'Times New Roman', Times, Baskerville, Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Dynamically map Tailwind's indigo and blue tokens to our active theme accent variables */
+  --color-indigo-50: var(--accent-50);
+  --color-indigo-100: var(--accent-100);
+  --color-indigo-200: var(--accent-200);
+  --color-indigo-300: var(--accent-300);
+  --color-indigo-400: var(--accent-400);
+  --color-indigo-500: var(--accent-500);
+  --color-indigo-600: var(--accent-600);
+  --color-indigo-700: var(--accent-700);
+  --color-indigo-800: var(--accent-800);
+  --color-indigo-900: var(--accent-900);
+  --color-indigo-950: var(--accent-950);
+}
+
+:root {
+  /* Default: Times New Roman as requested */
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+
+  /* Light Theme: Classic Blue & White Combo */
+  --accent-50: #eff6ff;
+  --accent-100: #dbeafe;
+  --accent-200: #bfdbfe;
+  --accent-300: #93c5fd;
+  --accent-400: #60a5fa;
+  --accent-500: #3b82f6;
+  --accent-600: #2563eb;
+  --accent-700: #1d4ed8;
+  --accent-800: #1e40af;
+  --accent-900: #1e3a8a;
+  --accent-950: #172554;
+}
+
+/* Light Theme Surface styling: Blue and White */
+html.light, body.light, [data-theme="light"] {
+  background-color: #f4f8fe;
+  color: #0f172a;
+}
+
+/* Dark Theme Surface styling: Midnight Slate with Blue */
+html.dark, body.dark, [data-theme="dark"] {
+  background-color: #020617;
+  color: #f8fafc;
+}
+
+html, body, button, input, select, textarea {
+  font-family: 'Times New Roman', Times, Baskerville, Georgia, serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Tabular figures for telemetry */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* JetBrains Mono strictly for telemetry codes, IPs, hashes */
+code, kbd, samp, pre, .font-mono {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.45);
+}

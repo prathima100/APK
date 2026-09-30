@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arohak MDM</title>
+    <meta name="description" content="Arohak MDM — Enterprise device telemetry, mobile device management, behavioral cadence analytics, anti-cheat detection, and zero-trust endpoint firewall." />
+    <meta property="og:title" content="Arohak MDM" />
+    <meta property="og:description" content="Arohak MDM — Enterprise device telemetry, mobile device management, behavioral cadence analytics, anti-cheat detection, and zero-trust endpoint firewall." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      (function() {
+        try {
+          var savedTheme = localStorage.getItem('arohak_theme') || 'dark';
+          var savedColor = localStorage.getItem('arohak_color') || 'corporate-indigo';
+          var root = document.documentElement;
+          root.setAttribute('data-color', savedColor);
+          root.setAttribute('data-theme', savedTheme);
+          if (savedTheme === 'dark') {
+            root.classList.add('dark');
+          } else {
+            root.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="font-sans antialiased min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
